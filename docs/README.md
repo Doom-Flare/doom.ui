@@ -1,4 +1,5 @@
 # doom.ui 玩家手册
+English: `docs/README.en.md`
 
 按你现在的处境挑一篇：
 

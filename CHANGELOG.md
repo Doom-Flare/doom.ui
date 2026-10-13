@@ -1,4 +1,6 @@
 # 变更日志 · doom.ui
+English: `CHANGELOG.en.md`
+
 
 > 口径：namespace `doom.ui`（基于 `doom.schedule` 的 SID 会话管理 UI 框架）。
 > 目标环境 Minecraft 1.21.6 – 26.3；当前版本 v2.1.0。
