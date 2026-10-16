@@ -1,5 +1,5 @@
 # doom.ui:__help__ -- display help information
-tellraw @s {"text":"=== [DT] DBM 5.0 by Doom_Decapitator ===","color":"gold","bold":true}
+tellraw @s {"text":"=== [DT] DBM 5.0 by Doom_Flare ===","color":"gold","bold":true}
 tellraw @s {"text":"--- Actionbar ---","color":"green"}
 tellraw @s {"text":"api/actionbar {with:{targets, content, time, slot, priority, fade, on_fade, on_interrupt}}","color":"white"}
 tellraw @s {"text":"  time: ticks (or duration). priority: 10=default.","color":"gray"}

@@ -73,5 +73,5 @@ body:
     attributes:
       label: 提交前确认
       options:
-        - label: 我看过 [用法与 API](https://github.com/DoomDecapitator/doom.ui/blob/main/docs/02-用法与API.md)，现有 API 拼不出这个效果
+        - label: 我看过 [用法与 API](https://github.com/Doom-Flare/doom.ui/blob/main/docs/02-用法与API.md)，现有 API 拼不出这个效果
           required: false

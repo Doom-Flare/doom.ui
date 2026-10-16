@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: 下载与版本（Releases）
-    url: https://github.com/DoomDecapitator/doom.ui/releases
+    url: https://github.com/Doom-Flare/doom.ui/releases
     about: 先在这里拿最新 zip；每个附件名都带版本号，正文里有校验值
   - name: 玩家手册（安装 / 用法与 API / 兼容与版本）
-    url: https://github.com/DoomDecapitator/doom.ui/blob/main/docs/README.md
+    url: https://github.com/Doom-Flare/doom.ui/blob/main/docs/README.md
     about: 装之前先看一眼；大部分"装了没反应"都是缺依赖 doom.schedule 或没 /reload
   - name: 变更与已知限制（CHANGELOG）
-    url: https://github.com/DoomDecapitator/doom.ui/blob/main/CHANGELOG.md
+    url: https://github.com/Doom-Flare/doom.ui/blob/main/CHANGELOG.md
     about: 每个版本改了什么、哪些是已知限制 —— 报 bug 之前先扫一眼

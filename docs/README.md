@@ -15,7 +15,7 @@ English: `docs/README.en.md`
 
 ## 三十秒版
 
-1. 装依赖 [doom.schedule](https://github.com/DoomDecapitator/doom.schedule) v2+（不装，alert / flash / 淡出回调会静默失效）。
+1. 装依赖 [doom.schedule](https://github.com/Doom-Flare/doom.schedule) v2+（不装，alert / flash / 淡出回调会静默失效）。
 2. 把 `doom.ui/` 和 `doom.schedule/` 一起丢进 `<存档>/datapacks/`（服务器：`world/datapacks/`）。
 3. `/reload`，然后：
    ```

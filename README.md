@@ -2,7 +2,7 @@
 English: `README.en.md`
 
 
-[![最新版本](https://img.shields.io/github/v/release/DoomDecapitator/doom.ui?include_prereleases&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC)](https://github.com/DoomDecapitator/doom.ui/releases)
+[![最新版本](https://img.shields.io/github/v/release/Doom-Flare/doom.ui?include_prereleases&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC)](https://github.com/Doom-Flare/doom.ui/releases)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.6%20%E2%80%93%2026.3-3C8527)](docs/04-兼容与版本.md)
 [![许可](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-All%20Rights%20Reserved%20%C2%B7%20Beta-c0392b)](docs/05-致谢与许可.md)
 
@@ -24,7 +24,7 @@ English: `README.en.md`
 2. 把它**和依赖 `doom.schedule/`** 一起放进 `saves/<你的存档>/datapacks/`。服务器放 `world/datapacks/`
 3. 进游戏 `/reload`
 
-注意，必须同时装 [doom.schedule](https://github.com/DoomDecapitator/doom.schedule) v2 或更新版**，否则 alert、flash、淡出回调会静默失效。
+注意，必须同时装 [doom.schedule](https://github.com/Doom-Flare/doom.schedule) v2 或更新版**，否则 alert、flash、淡出回调会静默失效。
 
 装好后敲一条试试：
 
@@ -91,7 +91,7 @@ Windows PowerShell:   (Get-FileHash .\doom.ui-v2.1.0.zip -Algorithm SHA256).Hash
 
 | 依赖 | 版本 | 为什么 |
 |---|---|---|
-| [doom.schedule](https://github.com/DoomDecapitator/doom.schedule) | **v2+** | alert / flash / actionbar 淡出 的延迟回调都走它。缺了不会报错，但**这些效果会静默不发生** |
+| [doom.schedule](https://github.com/Doom-Flare/doom.schedule) | **v2+** | alert / flash / actionbar 淡出 的延迟回调都走它。缺了不会报错，但**这些效果会静默不发生** |
 
 本包不接原版房规（不改 gamerule、不动刷怪），卸载干净。
 
@@ -155,7 +155,7 @@ function doom.ui:api/xpbar      {with:{targets:"@s",time:100}}
 |---|---|
 | 单人存档 / 服务器 | 都行；服务器用 `world/datapacks/` |
 | 实验性玩法 | 不需要开任何实验性玩法 |
-| 依赖 [doom.schedule](https://github.com/DoomDecapitator/doom.schedule) | **v2.3+**，同样按 MC 版本选变体 |
+| 依赖 [doom.schedule](https://github.com/Doom-Flare/doom.schedule) | **v2.3+**，同样按 MC 版本选变体 |
 | 缺 `doom.schedule` v2+ | alert / flash / 淡出回调静默失效 |
 
 完整的版本矩阵与升级/降级建议见 [`docs/04-兼容与版本.md`](docs/04-兼容与版本.md)。
@@ -168,7 +168,7 @@ function doom.ui:api/xpbar      {with:{targets:"@s",time:100}}
 - **可切跑的门与打包脚本**：[`src/`](src/)：静态门（JSON / 引用闭包 / mcfunction 加载期规则）、结构门（泄漏 + 顶层白名单）、
   确定性打包脚本。不想读代码的话，直接下 `dist/` 的 zip 即可，**用不到 `src/`**。
 - **玩家手册**：[`docs/`](docs/README.md)：安装 / 用法与 API / 示例调用串 / 兼容与版本 / 致谢与许可。
-- 同一个版本也附在 [Releases](https://github.com/DoomDecapitator/doom.ui/releases)
+- 同一个版本也附在 [Releases](https://github.com/Doom-Flare/doom.ui/releases)
   （附件名带版本号，正文有四段：下哪个 / 怎么装 / 校验值 / 源码在哪）。
 - **真机验收台与逐轮取证报告**放在私有开发仓库（不对外）：那套东西要一台开着 RCON 的服务器和一个真实客户端，
   按仓库模板规矩不进这个仓库。想知道"它凭什么说 53/335 全绿"，看 [CHANGELOG.md](CHANGELOG.md) 的数字与结论。

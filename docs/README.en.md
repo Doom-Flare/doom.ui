@@ -16,7 +16,7 @@ Pick the page that matches your situation:
 
 ## Thirty-second version
 
-1. Install the dependency [doom.schedule](https://github.com/DoomDecapitator/doom.schedule) v2+ (without it, alert / flash / fade-out callbacks silently stop working).
+1. Install the dependency [doom.schedule](https://github.com/Doom-Flare/doom.schedule) v2+ (without it, alert / flash / fade-out callbacks silently stop working).
 2. Drop `doom.ui/` and `doom.schedule/` together into `<save>/datapacks/` (server: `world/datapacks/`).
 3. `/reload`, then:
    ```

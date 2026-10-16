@@ -2,7 +2,7 @@
 
 中文: `README.md`
 
-[![Latest release](https://img.shields.io/github/v/release/DoomDecapitator/doom.ui?include_prereleases&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC)](https://github.com/DoomDecapitator/doom.ui/releases)
+[![Latest release](https://img.shields.io/github/v/release/Doom-Flare/doom.ui?include_prereleases&label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC)](https://github.com/Doom-Flare/doom.ui/releases)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.6%20%E2%80%93%2026.3-3C8527)](docs/04-兼容与版本.md)
 [![License](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-All%20Rights%20Reserved%20%C2%B7%20Beta-c0392b)](docs/05-致谢与许可.md)
 
@@ -24,7 +24,7 @@ This pack has two version dividing lines (the 1.21.9 `pack.mcmeta` rules, and th
 2. Put it **together with the dependency `doom.schedule/`** into `saves/<your save>/datapacks/`. For a server, put them in `world/datapacks/`
 3. Enter the game and `/reload`
 
-Note that you must install [doom.schedule](https://github.com/DoomDecapitator/doom.schedule) v2 or newer**, otherwise alert, flash and fade-out callbacks will silently stop working.
+Note that you must install [doom.schedule](https://github.com/Doom-Flare/doom.schedule) v2 or newer**, otherwise alert, flash and fade-out callbacks will silently stop working.
 
 Once installed, try one line:
 
@@ -90,7 +90,7 @@ These values are not hand-copied. `node src/tools/make_dist.mjs --check` compare
 
 | Dependency | Version | Why |
 |---|---|---|
-| [doom.schedule](https://github.com/DoomDecapitator/doom.schedule) | **v2+** | The delayed callbacks of alert / flash / actionbar fade-out all go through it. Without it there is no error, but **those effects silently do not happen** |
+| [doom.schedule](https://github.com/Doom-Flare/doom.schedule) | **v2+** | The delayed callbacks of alert / flash / actionbar fade-out all go through it. Without it there is no error, but **those effects silently do not happen** |
 
 This pack does not touch vanilla gamerules (it does not change gamerules or mob spawning), and uninstalls cleanly.
 
@@ -154,7 +154,7 @@ and the old name is a parse-time error ⇒ that whole branch of functions fails 
 |---|---|
 | Single-player save / server | Both work; for a server use `world/datapacks/` |
 | Experimental gameplay | No experimental gameplay needs to be enabled |
-| Dependency [doom.schedule](https://github.com/DoomDecapitator/doom.schedule) | **v2.3+**, also picked by MC version |
+| Dependency [doom.schedule](https://github.com/Doom-Flare/doom.schedule) | **v2.3+**, also picked by MC version |
 | Missing `doom.schedule` v2+ | alert / flash / fade-out callbacks silently stop working |
 
 The complete version matrix with upgrade/downgrade advice is in [`docs/04-兼容与版本.md`](docs/04-兼容与版本.md).
@@ -167,7 +167,7 @@ The complete version matrix with upgrade/downgrade advice is in [`docs/04-兼容
 - **The runnable gates and packing scripts**: [`src/`](src/): static gate (JSON / reference closure / mcfunction load-time rules), structural gate (leaks + top-level whitelist),
   and the deterministic packing script. If you do not want to read code, just download the zip from `dist/` — **you do not need `src/`**.
 - **Player manual**: [`docs/`](docs/README.md): installation / usage and API / example call strings / compatibility and versions / credits and licence.
-- The same version is also attached to [Releases](https://github.com/DoomDecapitator/doom.ui/releases)
+- The same version is also attached to [Releases](https://github.com/Doom-Flare/doom.ui/releases)
   (the asset names carry the version number, and the body has four sections: which to download / how to install / checksums / where the source is).
 - **The real-machine acceptance bench and the per-round evidence reports** live in a private development repo (not public): that setup needs a server with RCON open plus a real client,
   and by the repo template's rules it does not go into this repo. If you want to know "why can it claim 53/335 all green", see the numbers and conclusions in [CHANGELOG.md](CHANGELOG.md).
