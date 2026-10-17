@@ -36,7 +36,9 @@ If a gold `Hello` appears on screen and stays for 10 seconds, it works. After do
 
 ## Current status
 
-**v2.1.0**, supporting Minecraft 1.21.6 through 26.3.
+**v2.1.1**, supporting Minecraft 1.21.6 through 26.3.
+This release only tidies attribution and links: the author line in `__help__` / `__load__` inside the two variant packs now says `Doom_Flare` instead of the old username; the command logic is byte-identical to v2.1.0 (not a line changed in the 136 mcfunction files), after which all three zips were repacked as the rules require.
+
 
 Real-machine acceptance has been run: **53 cases / 335 assertions all green** (1.21.9 · Fabric, also 53/0 · 335/0 under a stress test with 30 players online at once). 26.3 was separately accepted with the in-pack self-assertion suite: **15/15 PASS · 0 load errors**.
 
@@ -73,16 +75,16 @@ More detailed installation steps (covering "where the pack goes, how it goes on 
 
 ```
 Linux / macOS:        sha256sum -c SHA256SUMS.txt
-Windows PowerShell:   (Get-FileHash .\doom.ui-v2.1.0.zip -Algorithm SHA256).Hash
+Windows PowerShell:   (Get-FileHash .\doom.ui-v2.1.1.zip -Algorithm SHA256).Hash
 ```
 
 If it prints `OK` (or the hash equals the string in `SHA256SUMS.txt`), the download is complete; if it does not match, do not use it — download again. Current values:
 
 | File | sha256 |
 |---|---|
-| `doom.ui-v2.1.0.zip` (1.21.9–1.21.10) | `a43b25377843e18e10a76dbcb7a0ee58f638a2c45ae52f88d03787b796ed2ddc` |
-| `doom.ui-v2.1.0-mc1.21.11+.zip` (1.21.11–26.3) | `70871ac529587644f5a019672d0d9de7e6f3dff6e9f7abcb3c56f889e6c6f83e` |
-| `doom.ui-v2.1.0-mc1.21.6-1.21.8.zip` (1.21.6–1.21.8) | `e3ae746c8ee73a502b1a2561b09431b9ec6a983a56a139f61878d817695a71e7` |
+| `doom.ui-v2.1.1.zip` (1.21.9–1.21.10) | `6e9e7e7e09364159caff3a35c91fdc6f613e7a4d6d050caa4d52398e21971fb6` |
+| `doom.ui-v2.1.1-mc1.21.11+.zip` (1.21.11–26.3) | `2af9c3e4bcbeff1ac8bb335303964cbc7f04caee58bf5aa4a2bd017c9b088e6b` |
+| `doom.ui-v2.1.1-mc1.21.6-1.21.8.zip` (1.21.6–1.21.8) | `2340bab5a8fbba6a788d97aea4b27f53332e82f22badbe6e066cde798b0eb21a` |
 
 These values are not hand-copied. `node src/tools/make_dist.mjs --check` compares the bytes of a fresh re-pack against the zip in `dist/` byte by byte, and errors if they differ. The hash you get from re-packing should be exactly the same as the table above.
 
@@ -139,10 +141,10 @@ Copy-paste-ready full call strings: [`docs/03-示例调用串.md`](docs/03-示�
 
 | MC version | data format | Which one | `gamerule` name | Measured |
 |---|---|---|---|---|
-| **1.21.6 / 1.21.7 / 1.21.8** | 80 / 81 | `v2.1.0-mc1.21.6-1.21.8` | old | Source pack as-is |
-| **1.21.9 / 1.21.10** | 88.0 | `v2.1.0` (primary) | old | 53/53 + 15/15 |
-| **1.21.11 / 26.1 / 26.1.1 / 26.1.2 / 26.2 / 26.3** | 94.1 – 121.0 | `v2.1.0-mc1.21.11+` | new | 15/15 (26.3) |
-The two modern variants use purely new-style mcmeta (`min_format`/`max_format`, no `supported_formats`), making the self-declared range equal the actual capability: `v2.1.0` declares 88.0–88.0, and `v2.1.0-mc1.21.11+` declares 94.1–121.0.
+| **1.21.6 / 1.21.7 / 1.21.8** | 80 / 81 | `v2.1.1-mc1.21.6-1.21.8` | old | Source pack as-is |
+| **1.21.9 / 1.21.10** | 88.0 | `v2.1.1` (primary) | old | 53/53 + 15/15 |
+| **1.21.11 / 26.1 / 26.1.1 / 26.1.2 / 26.2 / 26.3** | 94.1 – 121.0 | `v2.1.1-mc1.21.11+` | new | 15/15 (26.3) |
+The two modern variants use purely new-style mcmeta (`min_format`/`max_format`, no `supported_formats`), making the self-declared range equal the actual capability: `v2.1.1` declares 88.0–88.0, and `v2.1.1-mc1.21.11+` declares 94.1–121.0.
 
 | 1.21.5 and lower | ≤ 71 | Not supported | — | — |
 

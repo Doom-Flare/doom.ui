@@ -26,9 +26,9 @@ const CHECK = process.argv.includes('--check');
 
 // 变体表：{包体目录, zip 附件名}。zip 内顶层目录名 = 包体目录的 basename。
 const VARIANTS = [
-  { pack: path.join(ROOT, 'doom.ui'),                            name: 'doom.ui-v2.1.0.zip' },
-  { pack: path.join(ROOT, 'variants', 'doom.ui-1.21.11-26.3'),   name: 'doom.ui-v2.1.0-mc1.21.11+.zip' },
-  { pack: path.join(ROOT, 'variants', 'doom.ui-1.21.6-1.21.8'),  name: 'doom.ui-v2.1.0-mc1.21.6-1.21.8.zip' },
+  { pack: path.join(ROOT, 'doom.ui'),                            name: 'doom.ui-v2.1.1.zip' },
+  { pack: path.join(ROOT, 'variants', 'doom.ui-1.21.11-26.3'),   name: 'doom.ui-v2.1.1-mc1.21.11+.zip' },
+  { pack: path.join(ROOT, 'variants', 'doom.ui-1.21.6-1.21.8'),  name: 'doom.ui-v2.1.1-mc1.21.6-1.21.8.zip' },
 ];
 
 // ---- CRC32（自实现：不依赖 Node 版本里的 zlib.crc32）----

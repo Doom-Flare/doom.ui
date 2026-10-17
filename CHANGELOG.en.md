@@ -12,6 +12,27 @@
 
 ---
 
+## v2.1.1 · attribution and link tidy-up (repack) · 2026-10-16
+
+Downloads:
+- [`dist/doom.ui-v2.1.1.zip`](dist/doom.ui-v2.1.1.zip), 1.21.9 – 1.21.10 (primary)
+  · sha256 `6e9e7e7e09364159caff3a35c91fdc6f613e7a4d6d050caa4d52398e21971fb6`
+- [`dist/doom.ui-v2.1.1-mc1.21.11+.zip`](dist/doom.ui-v2.1.1-mc1.21.11+.zip), 1.21.11 – 26.3
+  · sha256 `2af9c3e4bcbeff1ac8bb335303964cbc7f04caee58bf5aa4a2bd017c9b088e6b`
+- [`dist/doom.ui-v2.1.1-mc1.21.6-1.21.8.zip`](dist/doom.ui-v2.1.1-mc1.21.6-1.21.8.zip), 1.21.6 – 1.21.8
+  · sha256 `2340bab5a8fbba6a788d97aea4b27f53332e82f22badbe6e066cde798b0eb21a`
+
+> The command logic is byte-identical to v2.1.0 (not a line changed in the 136 mcfunction files).
+> This release only replaces the old username with `Doom_Flare` in the author line of `__help__` / `__load__`
+> inside the two variant packs, then repacks all three zips and recomputes their sha256 as the rules require.
+
+### What you can verify
+
+- `node src/tools/make_dist.mjs --check` reports all three zips byte-identical.
+- Compared with v2.1.0, `v2.1.1-mc1.21.11+` / `v2.1.1-mc1.21.6-1.21.8` each differ in just 2 mcfunction files (the author line); the other 140 entries are byte-identical. The primary artifact is unchanged in content and was only renamed along with the version number.
+
+---
+
 ## v2.1.0 · multi-version support (1.21.6 → 26.3) + correction of a case/assertion count typo, 2026-10-05
 
 Downloads:

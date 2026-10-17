@@ -1,4 +1,4 @@
-tellraw @a [{"text":"[DT] ","color":"gold"},{"text":"DBM 5.0","color":"green"},{"text":" by Doom_Decapitator","color":"gray"}]
+tellraw @a [{"text":"[DT] ","color":"gold"},{"text":"DBM 5.0","color":"green"},{"text":" by Doom_Flare","color":"gray"}]
 scoreboard objectives add dt.id dummy
 scoreboard objectives add dt.uid dummy
 scoreboard objectives add dt.leave custom:leave_game

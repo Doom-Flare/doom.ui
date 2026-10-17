@@ -12,6 +12,27 @@ English: `CHANGELOG.en.md`
 
 ---
 
+## v2.1.1 · 署名与链接整理（重打包）· 2026-10-16
+
+下载：
+- [`dist/doom.ui-v2.1.1.zip`](dist/doom.ui-v2.1.1.zip)，1.21.9 – 1.21.10（主用）
+  · sha256 `6e9e7e7e09364159caff3a35c91fdc6f613e7a4d6d050caa4d52398e21971fb6`
+- [`dist/doom.ui-v2.1.1-mc1.21.11+.zip`](dist/doom.ui-v2.1.1-mc1.21.11+.zip)，1.21.11 – 26.3
+  · sha256 `2af9c3e4bcbeff1ac8bb335303964cbc7f04caee58bf5aa4a2bd017c9b088e6b`
+- [`dist/doom.ui-v2.1.1-mc1.21.6-1.21.8.zip`](dist/doom.ui-v2.1.1-mc1.21.6-1.21.8.zip)，1.21.6 – 1.21.8
+  · sha256 `2340bab5a8fbba6a788d97aea4b27f53332e82f22badbe6e066cde798b0eb21a`
+
+> 命令逻辑与 v2.1.0 逐字节相同（136 个 mcfunction 未改一行）。
+> 这一版只把两个变体包里 `__help__` / `__load__` 的作者行从旧用户名改成 `Doom_Flare`，
+> 然后按规范重打三份 zip、重算 sha256。
+
+### 能核对什么
+
+- `node src/tools/make_dist.mjs --check` 三份 zip 全部逐字节一致。
+- 与 v2.1.0 相比，`v2.1.1-mc1.21.11+` / `v2.1.1-mc1.21.6-1.21.8` 各只有 2 个 mcfunction 文件不同（作者行），其余 140 个条目逐字节相同；主用份内容未变，仅随版本号重命名附件。
+
+---
+
 ## v2.1.0 · 多版本支持（1.21.6 → 26.3）+ 用例/断言数笔误修正，2026-10-05
 
 下载：

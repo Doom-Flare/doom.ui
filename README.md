@@ -36,7 +36,9 @@ English: `README.en.md`
 
 ## 当前状态
 
-**v2.1.0**，支持 Minecraft 1.21.6 到 26.3。
+**v2.1.1**，支持 Minecraft 1.21.6 到 26.3。
+这一版只做署名与链接整理：两个变体包里 `__help__` / `__load__` 的作者行从旧用户名改为 `Doom_Flare`，命令逻辑与 v2.1.0 逐字节相同（136 个 mcfunction 未改一行），随后按规范重打三份 zip。
+
 
 已跑过真机验收：**53 用例 / 335 断言全绿**（1.21.9 · Fabric，30 名玩家同时在线的压测下也是 53/0 · 335/0）。26.3 另用包内自断言套件验收 **15/15 PASS · 0 加载错误**。
 
@@ -73,16 +75,16 @@ English: `README.en.md`
 
 ```
 Linux / macOS:        sha256sum -c SHA256SUMS.txt
-Windows PowerShell:   (Get-FileHash .\doom.ui-v2.1.0.zip -Algorithm SHA256).Hash
+Windows PowerShell:   (Get-FileHash .\doom.ui-v2.1.1.zip -Algorithm SHA256).Hash
 ```
 
 输出 `OK`（或哈希与 `SHA256SUMS.txt` 里那一串相等）就是完整下载；不等就别用，重新下。当前值：
 
 | 文件 | sha256 |
 |---|---|
-| `doom.ui-v2.1.0.zip`（1.21.9–1.21.10） | `a43b25377843e18e10a76dbcb7a0ee58f638a2c45ae52f88d03787b796ed2ddc` |
-| `doom.ui-v2.1.0-mc1.21.11+.zip`（1.21.11–26.3） | `70871ac529587644f5a019672d0d9de7e6f3dff6e9f7abcb3c56f889e6c6f83e` |
-| `doom.ui-v2.1.0-mc1.21.6-1.21.8.zip`（1.21.6–1.21.8） | `e3ae746c8ee73a502b1a2561b09431b9ec6a983a56a139f61878d817695a71e7` |
+| `doom.ui-v2.1.1.zip`（1.21.9–1.21.10） | `6e9e7e7e09364159caff3a35c91fdc6f613e7a4d6d050caa4d52398e21971fb6` |
+| `doom.ui-v2.1.1-mc1.21.11+.zip`（1.21.11–26.3） | `2af9c3e4bcbeff1ac8bb335303964cbc7f04caee58bf5aa4a2bd017c9b088e6b` |
+| `doom.ui-v2.1.1-mc1.21.6-1.21.8.zip`（1.21.6–1.21.8） | `2340bab5a8fbba6a788d97aea4b27f53332e82f22badbe6e066cde798b0eb21a` |
 
 这个值不是手抄的。`node src/tools/make_dist.mjs --check` 会把「现在重新打一次」的字节与 `dist/` 里的 zip 逐字节比，不一致就报错。你重新打包得到的 hash 应当与上表完全相同。
 
@@ -140,10 +142,10 @@ function doom.ui:api/xpbar      {with:{targets:"@s",time:100}}
 
 | MC 版本 | data format | 用哪份 | `gamerule` 名 | 实测 |
 |---|---|---|---|---|
-| **1.21.6 / 1.21.7 / 1.21.8** | 80 / 81 | `v2.1.0-mc1.21.6-1.21.8` | 旧 | 源包形态 |
-| **1.21.9 / 1.21.10** | 88.0 | `v2.1.0`（主用）| 旧 | 53/53 + 15/15 |
-| **1.21.11 / 26.1 / 26.1.1 / 26.1.2 / 26.2 / 26.3** | 94.1 – 121.0 | `v2.1.0-mc1.21.11+` | 新 | 15/15（26.3） |
-两份 modern 变体用纯新式 mcmeta（`min_format`/`max_format`，无 `supported_formats`），使自称区间等于实际能力：`v2.1.0` 声明 88.0–88.0，`v2.1.0-mc1.21.11+` 声明 94.1–121.0。
+| **1.21.6 / 1.21.7 / 1.21.8** | 80 / 81 | `v2.1.1-mc1.21.6-1.21.8` | 旧 | 源包形态 |
+| **1.21.9 / 1.21.10** | 88.0 | `v2.1.1`（主用）| 旧 | 53/53 + 15/15 |
+| **1.21.11 / 26.1 / 26.1.1 / 26.1.2 / 26.2 / 26.3** | 94.1 – 121.0 | `v2.1.1-mc1.21.11+` | 新 | 15/15（26.3） |
+两份 modern 变体用纯新式 mcmeta（`min_format`/`max_format`，无 `supported_formats`），使自称区间等于实际能力：`v2.1.1` 声明 88.0–88.0，`v2.1.1-mc1.21.11+` 声明 94.1–121.0。
 
 | 1.21.5 及更低 | ≤ 71 | 不支持 | — | — |
 
